@@ -62,3 +62,33 @@ transform: translateX(50px);
 .box6:hover {
     transform: rotate(300deg);
 }
+
+
+.fill-text {
+  font-size: 2em;
+  font-weight: bold;
+  color: transparent;
+  position: relative;
+}
+
+.fill-text::before {
+  content: attr(data-text);
+  content: "Київ, вул. Хрещатик, 10";
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #00aaff;
+  overflow: hidden;
+  white-space: nowrap;
+  clip-path: inset(0 100% 0 0);
+  animation: fillColor 3s linear forwards;
+}
+
+@keyframes fillColor {
+  0% { clip-path: inset(0 100% 0 0); }
+  100% { clip-path: inset(0 0 0 0); }
+}
+
+
+
+

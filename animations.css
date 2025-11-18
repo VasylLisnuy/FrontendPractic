@@ -1,0 +1,41 @@
+.box1 {
+    width: 410px;
+    height: 410px;
+    background-color: rgb(43, 255, 0, 0.7);
+    border: rgb(0, 0, 0) solid;
+    border-radius: 5px;
+    font-size: 40px;
+    animation-name: change-background;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+animation-direction: alternate-reverse;
+}
+
+
+
+
+@keyframes change-background {
+    0% {
+        background-color: cornflowerblue;
+        transform: translateX(0px);
+    }
+
+    25% {
+        background-color: rgb(68, 0, 255);
+    }
+
+    50% {
+        background-color: aqua;
+        border-radius: 50%;
+
+    }
+
+    75% {
+        background-color: red;
+    }
+
+    100% {
+        background-color: cornflowerblue;
+        transform: translateX(500px);
+    }
+}
